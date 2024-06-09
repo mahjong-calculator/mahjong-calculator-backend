@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Silent tar">
+    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Change sequence">
       <change beforePath="$PROJECT_DIR$/.github/workflows/code_integration.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/code_integration.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717951633335</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Change sequence">
+      <option name="closed" value="true" />
+      <created>1717951804607</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717951804607</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -249,7 +258,8 @@
     <MESSAGE value="update workflow" />
     <MESSAGE value="Reformat file" />
     <MESSAGE value="Silent tar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Silent tar" />
+    <MESSAGE value="Change sequence" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change sequence" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
