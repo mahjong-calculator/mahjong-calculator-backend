@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Deploy api docs to gh page">
+    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Add license and readme">
+      <change afterPath="$PROJECT_DIR$/.github/pull_request_template.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -267,7 +269,8 @@
     <MESSAGE value="Silent tar" />
     <MESSAGE value="Change sequence" />
     <MESSAGE value="Deploy api docs to gh page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy api docs to gh page" />
+    <MESSAGE value="Add license and readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add license and readme" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
