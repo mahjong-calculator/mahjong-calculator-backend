@@ -74,14 +74,12 @@ jobs:
         with:
           name: venv
           path: .venv/
-      - name: Activate virtualenv
-        run: source .venv/bin/activate
-      - name: Run Black
-        run: black . --check
-      - name: Run Isort
-        run: isort . --check
-      - name: Run Pylint
-        run: pylint .
+      - name: Run Black check / Isort check / Pylint
+        run: |
+          source .venv/bin/activate
+          black . --check
+          isort . --check
+          pylint .
   test:
     name: Unit Tests
     runs-on: ubuntu-latest
@@ -100,10 +98,10 @@ jobs:
         with:
           name: venv
           path: .venv/
-      - name: Activate virtualenv
-        run: source .venv/bin/activate
       - name: Run tests with coverage
-        run: pytest --cov-report html:coverage_report --cov-report term:skip-covered --cov=src tests/
+        run: |
+          source .venv/bin/activate
+          pytest --cov-report html:coverage_report --cov-report term:skip-covered --cov=src tests/
       - name: Upload coverage report
         uses: actions/upload-artifact@v4
         with:
