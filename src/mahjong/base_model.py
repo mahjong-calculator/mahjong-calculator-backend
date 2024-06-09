@@ -17,21 +17,23 @@ class Tile(BaseModel):
 
     @computed_field
     def abbreviation(self) -> str:
+        abbr = ""
         match self.category:
             case MahjongTileCategory.CHARACTER:
-                return f"{self.number}m"
+                abbr = f"{self.number}m"
             case MahjongTileCategory.CIRCLE:
-                return f"{self.number}p"
+                abbr = f"{self.number}p"
             case MahjongTileCategory.BAMBOO:
-                return f"{self.number}s"
+                abbr = f"{self.number}s"
             case MahjongTileCategory.WIND:
-                return WIND_TILE_NUMBER_MAP[self.number][0]
+                abbr = WIND_TILE_NUMBER_MAP[self.number][0]
             case MahjongTileCategory.DRAGON:
-                return DRAGON_TILE_NUMBER_MAP[self.number][0]
+                abbr = DRAGON_TILE_NUMBER_MAP[self.number][0]
             case MahjongTileCategory.SEASON:
-                return SEASON_TILE_NUMBER_MAP[self.number][:2]
+                abbr = SEASON_TILE_NUMBER_MAP[self.number][:2]
             case MahjongTileCategory.FLOWER:
-                return FLOWER_TILE_NUMBER_MAP[self.number][:2]
+                abbr = FLOWER_TILE_NUMBER_MAP[self.number][:2]
+        return abbr
 
 
 class Hand(BaseModel):

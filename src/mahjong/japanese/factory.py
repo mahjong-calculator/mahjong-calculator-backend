@@ -14,5 +14,7 @@ def get_japanese_mahjong_factory(mahjong_branch: str):
                 return FourPlayerJapaneseMahjongHandler()
             case JapaneseMahjongBranch.THREE_PLAYER:
                 return ThreePlayerJapaneseMahjongHandler()
-    except Exception:
-        raise HTTPException(status_code=HTTP_422_UNPROCESSABLE_ENTITY, detail="Non-supported japanese mahjong branch.")
+    except Exception as exc:
+        raise HTTPException(
+            status_code=HTTP_422_UNPROCESSABLE_ENTITY, detail="Non-supported japanese mahjong branch."
+        ) from exc

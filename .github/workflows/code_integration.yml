@@ -1,0 +1,116 @@
+name: Code Integration
+run-name: Code Integration - ${{ github.ref_name }}
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+env:
+  BUILD_VERSION: ${{ github.run_id }}
+
+
+jobs:
+  prepare:
+    name: Prepare Code
+    runs-on: ubuntu-latest
+    outputs:
+      cache-key: ${{ steps.cache-deps.outputs.cache-hit }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      - name: Cache Poetry dependencies
+        id: cache-deps
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pypoetry
+            .venv
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: ${{ runner.os }}-poetry
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry config virtualenvs.in-project true
+      - name: Install dependencies
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          poetry install
+      - name: Upload .venv
+        uses: actions/upload-artifact@v4
+        with:
+          name: venv
+          path: .venv/
+  lint:
+    needs: prepare
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      - name: Download .venv
+        uses: actions/download-artifact@v4
+        with:
+          name: venv
+          path: .venv/
+      - name: Activate virtualenv
+        run: source .venv/bin/activate
+      - name: Run Black
+        run: black . --check
+      - name: Run Isort
+        run: isort . --check
+      - name: Run Pylint
+        run: pylint .
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    needs: prepare
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      - name: Download .venv
+        uses: actions/download-artifact@v4
+        with:
+          name: venv
+          path: .venv/
+      - name: Activate virtualenv
+        run: source .venv/bin/activate
+      - name: Run tests with coverage
+        run: pytest --cov-report html:coverage_report --cov-report term:skip-covered --cov=src tests/
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage_report
+          path: coverage_report/
+  cleanup:
+    name: Cleanup
+    runs-on: ubuntu-latest
+    needs: [test, lint]
+    steps:
+      - name: Remove .venv
+        uses: geekyeggo/delete-artifact
+        with:
+          name: venv

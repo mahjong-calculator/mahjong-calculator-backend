@@ -1,17 +1,16 @@
 from typing import Any
 
-import believe
 import pytest
 from fastapi.testclient import TestClient
 from httpx import Response
-from starlette.status import HTTP_200_OK, HTTP_400_BAD_REQUEST, HTTP_422_UNPROCESSABLE_ENTITY
+from starlette.status import HTTP_200_OK, HTTP_422_UNPROCESSABLE_ENTITY
 
 
 class TestGetMahjongTilesController:
 
     @pytest.fixture(autouse=True)
     def apply_client(self, mock_client: TestClient):
-        self.client = mock_client
+        self.client = mock_client  # pylint: disable=attribute-defined-outside-init
 
     def trigger_run(self, params: dict[str, Any]) -> Response:
         return self.client.get("/tiles", params=params)
