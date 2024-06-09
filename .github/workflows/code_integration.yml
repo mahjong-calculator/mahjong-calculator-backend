@@ -115,6 +115,14 @@ jobs:
         with:
           name: coverage_report
           path: coverage_report/
+      - name: Build api document
+        run: |
+          python utils/export_openapi.py
+      - name: Upload api document
+        uses: actions/upload-artifact@v4
+        with:
+          name: api_docs
+          path: docs/
   cleanup:
     name: Cleanup
     runs-on: ubuntu-latest
