@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Add api doc artifact">
+    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Silent tar">
       <change beforePath="$PROJECT_DIR$/.github/workflows/code_integration.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/code_integration.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -212,7 +212,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717951366558</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="update workflow">
+      <option name="closed" value="true" />
+      <created>1717951526688</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717951526688</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Reformat file">
+      <option name="closed" value="true" />
+      <created>1717951609561</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717951609561</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Silent tar">
+      <option name="closed" value="true" />
+      <created>1717951633335</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717951633335</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -222,7 +246,10 @@
     <MESSAGE value="Update pylintrc and workflow" />
     <MESSAGE value="Update workflow" />
     <MESSAGE value="Add api doc artifact" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add api doc artifact" />
+    <MESSAGE value="update workflow" />
+    <MESSAGE value="Reformat file" />
+    <MESSAGE value="Silent tar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Silent tar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
