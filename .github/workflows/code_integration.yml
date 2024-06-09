@@ -76,7 +76,9 @@ jobs:
         with:
           name: venv
       - name: Extract .venv
-        run: tar -xvf .venv.tar
+        run: |
+          tar -xvf venv.tar
+          rm venv.tar
       - name: Run Black check / Isort check / Pylint
         run: |
           source .venv/bin/activate
@@ -101,7 +103,9 @@ jobs:
         with:
           name: venv
       - name: Extract .venv
-        run: tar -xvf .venv.tar
+        run: |
+          tar -xvf venv.tar
+          rm venv.tar
       - name: Run tests with coverage
         run: |
           source .venv/bin/activate
