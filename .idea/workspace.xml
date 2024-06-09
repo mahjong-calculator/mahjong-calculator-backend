@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Update workflow">
-      <change afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/export_openapi.py" afterDir="false" />
+    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Add api doc artifact">
       <change beforePath="$PROJECT_DIR$/.github/workflows/code_integration.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/code_integration.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717949982764</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add api doc artifact">
+      <option name="closed" value="true" />
+      <created>1717951366558</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717951366558</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -216,7 +221,8 @@
     <MESSAGE value="Add workflow" />
     <MESSAGE value="Update pylintrc and workflow" />
     <MESSAGE value="Update workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workflow" />
+    <MESSAGE value="Add api doc artifact" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add api doc artifact" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

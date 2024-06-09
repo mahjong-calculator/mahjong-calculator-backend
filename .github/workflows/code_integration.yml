@@ -60,7 +60,7 @@ jobs:
           path: venv.tar
   lint:
     needs: prepare
-    name: Lint
+    name: Lint Check
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -115,8 +115,30 @@ jobs:
         with:
           name: coverage_report
           path: coverage_report/
+  docs:
+    name: API Docs
+    runs-on: ubuntu-latest
+    needs: prepare
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+      - name: Download .venv
+        uses: actions/download-artifact@v4
+        with:
+          name: venv
+      - name: Extract .venv
+        run: |
+          tar -xvf venv.tar
+          rm venv.tar
       - name: Build api document
         run: |
+          source .venv/bin/activate
           python utils/export_openapi.py
       - name: Upload api document
         uses: actions/upload-artifact@v4
@@ -126,7 +148,7 @@ jobs:
   cleanup:
     name: Cleanup
     runs-on: ubuntu-latest
-    needs: [test, lint]
+    needs: [lint, test, docs]
     steps:
       - name: Remove .venv
         uses: geekyeggo/delete-artifact@v5
