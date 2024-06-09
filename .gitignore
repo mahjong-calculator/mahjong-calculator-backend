@@ -355,6 +355,6 @@ cython_debug/
 #.idea/
 
 ### Project
-docs/openapi.json
 coverage_report
 venv.tar
+/docs/openapi.json
