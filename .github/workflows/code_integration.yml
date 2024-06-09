@@ -52,7 +52,7 @@ jobs:
           export PATH="$HOME/.local/bin:$PATH"
           poetry install
       - name: Pack .venv
-        run: tar -cvf venv.tar .venv
+        run: tar -cf venv.tar .venv
       - name: Upload .venv
         uses: actions/upload-artifact@v4
         with:
@@ -75,7 +75,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: venv
-          path: .venv.tar
       - name: Extract .venv
         run: tar -xvf .venv.tar
       - name: Run Black check / Isort check / Pylint
@@ -101,7 +100,6 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: venv
-          path: .venv.tar
       - name: Extract .venv
         run: tar -xvf .venv.tar
       - name: Run tests with coverage
