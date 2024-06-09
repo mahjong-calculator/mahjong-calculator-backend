@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Rewrite tiles api">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/code_integration.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pylintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mahjong/base_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mahjong/base_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mahjong/japanese/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mahjong/japanese/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mahjong/japanese/handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mahjong/japanese/handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/controller/test_get_mahjong_tiles_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/controller/test_get_mahjong_tiles_controller.py" afterDir="false" />
+    <list default="true" id="9ab810ca-4c79-40c4-9115-1a329d322fe7" name="Changes" comment="Update pylintrc and workflow">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/code_integration.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/code_integration.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,13 +138,31 @@
       <option name="project" value="LOCAL" />
       <updated>1717945242377</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add workflow">
+      <option name="closed" value="true" />
+      <created>1717948965198</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948965198</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update pylintrc and workflow">
+      <option name="closed" value="true" />
+      <created>1717949082447</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717949082448</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
     <MESSAGE value="Rewrite tiles api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrite tiles api" />
+    <MESSAGE value="Add workflow" />
+    <MESSAGE value="Update pylintrc and workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update pylintrc and workflow" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

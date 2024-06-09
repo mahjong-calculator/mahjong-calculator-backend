@@ -115,6 +115,6 @@ jobs:
     needs: [test, lint]
     steps:
       - name: Remove .venv
-        uses: geekyeggo/delete-artifact
+        uses: geekyeggo/delete-artifact@v5
         with:
           name: venv
