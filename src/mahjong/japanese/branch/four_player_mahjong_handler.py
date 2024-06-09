@@ -3,17 +3,18 @@ from mahjong.japanese.handler import JapaneseMahjongHandler
 from mahjong.japanese.model import Tile
 
 
-class ThreePlayerJapaneseMahjongHandler(JapaneseMahjongHandler):
+class FourPlayerJapaneseMahjongHandler(JapaneseMahjongHandler):
 
     def generate_full_tiles(self) -> None:
         self._available_tiles = []
         self._available_tiles_counter = []
         # Character
-        self._available_tiles += [
-            Tile(category=MahjongTileCategory.CHARACTER, number=1),
-            Tile(category=MahjongTileCategory.CHARACTER, number=9),
-        ]
-        self._available_tiles_counter += [4, 4]
+        self._available_tiles += (
+            [Tile(category=MahjongTileCategory.CHARACTER, number=i) for i in range(1, 6)]
+            + [Tile(category=MahjongTileCategory.CHARACTER, number=5, dora=True)]
+            + [Tile(category=MahjongTileCategory.CHARACTER, number=i) for i in range(6, 10)]
+        )
+        self._available_tiles_counter += [4 for _ in range(1, 5)] + [3, 1] + [4 for _ in range(6, 10)]
         # Circle
         self._available_tiles += (
             [Tile(category=MahjongTileCategory.CIRCLE, number=i) for i in range(1, 6)]

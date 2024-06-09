@@ -12,6 +12,6 @@ class MahjongTileCategory(StrEnum):
 
 
 WIND_TILE_NUMBER_MAP = {1: "East", 2: "South", 3: "West", 4: "North"}
-DRAGON_TILE_NUMBER_MAP = {1: "Red", 2: "Green", 3: "White"}
+DRAGON_TILE_NUMBER_MAP = {1: "Red", 2: "Green", 3: "Bai"}  # Use Bai to avoid confusion of "W"
 FLOWER_TILE_NUMBER_MAP = {1: "Plum", 2: "Orchid", 3: "Bamboo", 4: "Chrysanthemum"}
 SEASON_TILE_NUMBER_MAP = {1: "Spring", 2: "Summer", 3: "Autumn", 4: "Winter"}

@@ -4,5 +4,5 @@ HAND_TILE_COUNT = 14
 
 
 class JapaneseMahjongBranch(StrEnum):
-    NORMAL = "normal"
+    FOUR_PLAYER = "four_player"
     THREE_PLAYER = "three_player"
