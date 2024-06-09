@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "mahjong-calculator-backend"
+version = "0.1.0"
+description = ""
+authors = ["Vongola <me@vongola.tw>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+pydash = "^8.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+isort = "^5.13.2"
+pylint = "^3.2.3"
+pytest = "^8.2.2"
+pylint-pydantic = "^0.3.2"
+believe = "^1.0.14"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+include = '\.py$'
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+pythonpath = "src"

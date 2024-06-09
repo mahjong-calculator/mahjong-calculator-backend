@@ -1,0 +1,1 @@
+HAND_TILE_COUNT = 17
